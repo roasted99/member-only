@@ -1,0 +1,28 @@
+
+<% @posts.each do |post| %>
+    <article class="card border-secondary mb-3">
+
+      <div class="card-body">
+        <div>
+          <h2 class="card-title"><strong><%= post.title %></strong></h2>
+          <p class="card-text"><%= post.body %></p>
+        </div>
+
+        <div>
+          <img src="">
+          <h4>Author</h4>
+          <p>David Johannson</p>
+        </div>
+      </div>
+
+      <div class="card-footer justify-content-end">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item"><%= link_to "Edit", edit_post_path(post) %></li>
+          <li class="list-group-item"><%= link_to "Destroy", post_path(post),
+                          method: :delete,
+                          data: { confirm: "Are you sure?" } %></li>
+        </ul>
+      </div>
+  
+    </article>
+ <% end %>

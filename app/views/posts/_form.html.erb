@@ -1,27 +1,12 @@
-<%= form_with(model: post) do |form| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-        <% post.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_field :body %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<fieldset>
+<%= simple_form_for(@post) do |p| %>
+<%= p.error_notification %>
+<div class="form-group">
+  
+  <%= p.input :title, label: "Title:", input_html: { class: "form-control"}, wrapper:false, label_html: {class: "form-label"}, placeholder: "Title" %>
+  <%= p.input :body, label: "Body:", input_html: { class: "form-control" }, label_html: { class: "form-label mt-4" }, placeholder: "What are you thinking about?" %>
+  
+</div>
+<%= p.button :submit, class: "btn btn-primary" %>
 <% end %>
+</fieldset>

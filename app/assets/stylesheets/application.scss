@@ -14,4 +14,29 @@
  *= require_self
  */
 
+ body {
+   margin: 0;
+ }
  
+ .navbar-brand h1{
+  color: white;
+ }
+
+ .card-body .icon {
+	 border: 1px solid red;
+ }
+
+ header {
+	 height: 20vh;
+	 background-color: rgba(255, 255, 255,.5);
+ }
+
+ .image {
+	border-radius: 50%;
+	img {
+		border-radius: 50%;
+	}
+}
+.notification:not(:last-child) {
+	margin-bottom: 0;
+}
