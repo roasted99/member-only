@@ -16,14 +16,11 @@
 
  body {
    margin: 0;
+	 padding: 0;
  }
  
  .navbar-brand h1{
   color: white;
- }
-
- .card-body .icon {
-	 border: 1px solid red;
  }
 
  header {
@@ -37,6 +34,7 @@
 		border-radius: 50%;
 	}
 }
+
 .notification:not(:last-child) {
 	margin-bottom: 0;
 }

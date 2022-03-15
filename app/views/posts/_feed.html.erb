@@ -8,10 +8,11 @@
           <p class="card-text"><%= post.body %></p>
         </div>
 
+        <% if user_signed_in? %>
         <div>
           <img src="">
-          <h4>Author</h4>
-          <p>David Johannson</p>
+          <strong><%= post.user.name %></strong><br />
+          <small><%= post.user.username %></small><br/>
         </div>
       </div>
 
@@ -23,6 +24,6 @@
                           data: { confirm: "Are you sure?" } %></li>
         </ul>
       </div>
-  
+      <% end %>
     </article>
  <% end %>
