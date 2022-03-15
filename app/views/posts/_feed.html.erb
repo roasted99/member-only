@@ -4,13 +4,15 @@
 
       <div class="card-body">
         <div>
-          <h2 class="card-title"><strong><%= post.title %></strong></h2>
+          <h2 class="card-title text-center"><strong><%= post.title %></strong></h2><br />
           <p class="card-text"><%= post.body %></p>
         </div>
 
         <% if user_signed_in? %>
-        <div>
-          <img src="">
+        <div class="card-body">
+          <figure class="figure image">
+  				<%= gravatar_image_tag(post.user.email, size: 64, alt: post.user.name) %>
+  			</figure>
           <strong><%= post.user.name %></strong><br />
           <small><%= post.user.username %></small><br/>
         </div>
